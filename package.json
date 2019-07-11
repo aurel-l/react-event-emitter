@@ -16,7 +16,7 @@
     "test:lint": "eslint --color --ignore-path .gitignore \"./src/**/*.ts\"",
     "declaration": "npm run clean:declaration && tsc --project tsconfig.declaration.json",
     "build": "npm run build:prod",
-    "build:es": "npm run clean:es && babel src/index.ts --out-dir dist/es --extensions \".ts\"",
+    "build:es": "npm run clean:es && babel src/index.ts --out-dir dist/es --extensions \".ts\" --source-maps",
     "build:cjs": "npm run clean:cjs && webpack",
     "build:prod": "cross-env NODE_ENV=production npm run build:es && npm run build:cjs -- --mode=production && npm run declaration",
     "build:dev": "cross-env NODE_ENV=dev npm run build:es && npm run build:cjs -- --mode=development",

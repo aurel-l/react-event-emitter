@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path'); /* eslint-disable-line */
 
 module.exports = {
   entry: './src/index.ts',
@@ -32,4 +32,5 @@ module.exports = {
       root: 'ReactDom',
     },
   },
+  devtool: 'source-map',
 };
