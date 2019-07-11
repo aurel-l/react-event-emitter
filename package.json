@@ -1,6 +1,6 @@
 {
   "name": "react-event-emitter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "DOM event emitter for React",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
