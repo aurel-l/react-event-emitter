@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "es2019"],
+    "strict": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "dist/declaration",
+    "emitDeclarationOnly": true
+  },
+  "files": ["src/index.ts"]
+}

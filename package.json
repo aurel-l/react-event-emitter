@@ -1,0 +1,85 @@
+{
+  "name": "event-emitter",
+  "version": "0.0.1",
+  "description": "DOM event emitter for React",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "jsnext:main": "dist/es/index.js",
+  "types": "dist/declaration/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run test:lint && npm run test:ts && npm run test:jest",
+    "test:jest": "jest",
+    "test:ts": "tsc --project tsconfig.check.json",
+    "test:lint": "eslint --color --ignore-path .gitignore \"./src/**/*.ts\"",
+    "declaration": "npm run clean:declaration && tsc --project tsconfig.declaration.json",
+    "build": "npm run build:prod",
+    "build:es": "npm run clean:es && babel src/index.ts --out-dir dist/es --extensions \".ts\"",
+    "build:cjs": "npm run clean:cjs && webpack",
+    "build:prod": "cross-env NODE_ENV=production npm run build:es && npm run build:cjs -- --mode=production && npm run declaration",
+    "build:dev": "cross-env NODE_ENV=dev npm run build:es && npm run build:cjs -- --mode=development",
+    "clean": "npm run clean:es && npm run clean:cjs && npm run clean:declaration",
+    "clean:es": "rimraf dist/es",
+    "clean:cjs": "rimraf dist/cjs",
+    "clean:declaration": "rimraf dist/declaration",
+    "prepublishOnly": "npm run build"
+  },
+  "lint-staged": {
+    "*.+(js,ts,json,md)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
+    }
+  },
+  "keywords": [
+    "react",
+    "dom",
+    "event",
+    "emitter",
+    "dispatch",
+    "fire"
+  ],
+  "author": "Aurélien Luciani <aurelien.luciani+npm@gmail.com> (https://github.com/aurel-l/)",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16",
+    "react-dom": "^16"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.5.0",
+    "@babel/core": "7.5.4",
+    "@babel/preset-env": "7.5.4",
+    "@babel/preset-typescript": "7.3.3",
+    "@testing-library/react": "8.0.4",
+    "@types/jest": "24.0.15",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.4",
+    "@typescript-eslint/eslint-plugin": "1.11.0",
+    "@typescript-eslint/parser": "1.11.0",
+    "babel-jest": "24.8.0",
+    "babel-loader": "8.0.6",
+    "babel-preset-minify": "0.5.0",
+    "core-js": "3.1.4",
+    "cross-env": "5.2.0",
+    "eslint": "6.0.1",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "husky": "3.0.0",
+    "jest": "24.8.0",
+    "lint-staged": "9.2.0",
+    "prettier": "1.18.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "rimraf": "2.6.3",
+    "typescript": "3.5.3",
+    "webpack": "4.35.3",
+    "webpack-cli": "3.3.5"
+  }
+}
