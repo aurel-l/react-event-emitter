@@ -103,3 +103,10 @@ You can run the tests (unit, linting, and type) by running `npm run test`.
 
 To build a new bundle, run `npm run build`, or `npm run build:dev` for
 development mode.
+
+## Acknowledgement
+
+This package's code was started while working within the
+[Molecular Modeling and Bioinformatics (MMB)](https://mmb.irbbarcelona.org/)
+group at the
+[Institute for Research in Biomedicine (IRB)](https://www.irbbarcelona.org/).
