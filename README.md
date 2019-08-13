@@ -1,6 +1,7 @@
 # react-event-emitter
 
-DOM CustomEvent emitter written in React.
+DOM CustomEvent emitter written in React. It's meant to be used at any level
+below the target element in the DOM tree.
 
 ## Why?
 
