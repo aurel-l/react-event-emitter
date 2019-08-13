@@ -7,7 +7,7 @@ module.exports = {
         targets: { esmodules: true },
         modules: false,
         useBuiltIns: 'usage',
-        corejs: '3',
+        corejs: 3,
       },
     ],
     '@babel/preset-typescript',
@@ -20,7 +20,7 @@ module.exports = {
           {
             targets: { node: 'current' },
             useBuiltIns: 'usage',
-            corejs: '3',
+            corejs: 3,
           },
         ],
       ],

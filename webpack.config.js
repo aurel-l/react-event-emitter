@@ -10,13 +10,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(js|ts)$/,
         loader: 'babel-loader',
       },
     ],
   },
   resolve: {
-    extensions: ['.ts'],
+    extensions: ['.js', '.ts'],
   },
   externals: {
     react: {
