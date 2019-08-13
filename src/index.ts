@@ -1,12 +1,4 @@
-import {
-  createElement,
-  useRef,
-  useEffect,
-  ReactNode,
-  Props,
-  ReactHTML,
-  useState,
-} from 'react';
+import { createElement, useRef, useEffect, ReactNode, useState } from 'react';
 
 interface EventEmitterProps {
   children?: ReactNode;
@@ -16,9 +8,10 @@ interface EventEmitterProps {
   bubbles?: boolean;
   cancelable?: boolean;
   composed?: boolean;
-  containerType?: keyof ReactHTML | string;
-  containerProps?: Props<any>;
 }
+
+// just to make sure that the component we use doesn't have any effect on layout
+const styleProps = { display: 'contents' };
 
 const EventEmitter = ({
   children = null,
@@ -28,8 +21,6 @@ const EventEmitter = ({
   bubbles,
   cancelable,
   composed,
-  containerType = 'div',
-  containerProps = {},
 }: EventEmitterProps) => {
   const domRef = useRef<HTMLDivElement>(null);
 
@@ -49,11 +40,7 @@ const EventEmitter = ({
   }, [isWaiting, eventType, detail, bubbles, cancelable, composed]);
 
   // render a container to dispatch the DOM event from
-  return createElement(
-    containerType,
-    { ...containerProps, ref: domRef },
-    children,
-  );
+  return createElement('div', { style: styleProps, ref: domRef }, children);
 };
 
 export default EventEmitter;

@@ -42,17 +42,15 @@ To see more, refer to the [examples](#example-usage) section.
 
 ### props
 
-| name           | type      | required | default     |
-| -------------- | --------- | -------- | ----------- |
-| children       | ReactNode | no       | `null`      |
-| eventType      | string    | yes      | `undefined` |
-| detail         | any       | no       | `undefined` |
-| waitUntil      | Promise   | no       | `undefined` |
-| bubbles        | boolean   | no       | `undefined` |
-| cancelable     | boolean   | no       | `undefined` |
-| composed       | boolean   | no       | `undefined` |
-| containerType  | string    | no       | 'div'       |
-| containerProps | object    | no       | {}          |
+| name       | type      | required | default     |
+| ---------- | --------- | -------- | ----------- |
+| children   | ReactNode | no       | `null`      |
+| eventType  | string    | yes      | `undefined` |
+| detail     | any       | no       | `undefined` |
+| waitUntil  | Promise   | no       | `undefined` |
+| bubbles    | boolean   | no       | `undefined` |
+| cancelable | boolean   | no       | `undefined` |
+| composed   | boolean   | no       | `undefined` |
 
 ### notes
 
