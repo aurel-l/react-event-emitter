@@ -79,7 +79,9 @@ const Component = ({ data }) => <EventEmitter eventType="load" detail={data} />;
 2. with Custom Elements
 
 In the case where the definition for `data-visualisation` might not be ready yet
-(code-splitting and async loading of the definition), use the `waitUntil` prop.
+(code-splitting and async loading of the definition), but it's the element that
+is supposed to listen for the emitted event, use the `waitUntil` prop to wait
+for its definition to be loaded.
 
 ```jsx
 import EventEmitter from 'react-event-emitter';
