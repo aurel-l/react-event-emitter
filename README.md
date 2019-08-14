@@ -1,3 +1,5 @@
+[![Property Setter logo](https://img.shields.io/npm/v/react-property-setter)](https://www.npmjs.com/package/react-event-emitter)
+
 # react-event-emitter
 
 DOM CustomEvent emitter written in React. It's meant to be used at any level
