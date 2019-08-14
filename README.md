@@ -100,7 +100,8 @@ const Component = ({ data }) => (
 
 Library written in TypeScript.
 
-You can run the tests (unit, linting, and type) by running `npm run test`.
+You can run the tests (unit, linting, and type-checking) by running
+`npm run test`.
 
 To build a new bundle, run `npm run build`, or `npm run build:dev` for
 development mode.

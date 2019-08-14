@@ -44,8 +44,12 @@
     "event",
     "emitter",
     "dispatch",
-    "fire"
+    "fire",
+    "CustomElements"
   ],
+  "homepage": "https://github.com/aurel-l/react-event-emitter#readme",
+  "bugs": "https://github.com/aurel-l/react-event-emitter/issues",
+  "repository": "github:aurel-l/react-event-emitter",
   "author": "Aurélien Luciani <aurelien.luciani+npm@gmail.com> (https://github.com/aurel-l/)",
   "license": "ISC",
   "peerDependencies": {
