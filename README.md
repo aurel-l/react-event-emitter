@@ -67,7 +67,7 @@ To see more, refer to the [examples](#example-usage) section.
 
 ## Example usage
 
-1. simple
+### simple
 
 Some DOM element higher up the tree is listening to a `load` event containing some data
 
@@ -77,7 +77,7 @@ import EventEmitter from 'react-event-emitter';
 const Component = ({ data }) => <EventEmitter eventType="load" detail={data} />;
 ```
 
-2. with Custom Elements
+### with Custom Elements
 
 In the case where the definition for `data-visualisation` might not be ready yet
 (code-splitting and async loading of the definition), but it's the element that
