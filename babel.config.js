@@ -6,8 +6,6 @@ module.exports = {
       {
         targets: { esmodules: true },
         modules: false,
-        useBuiltIns: 'usage',
-        corejs: 3,
       },
     ],
     '@babel/preset-typescript',
@@ -28,6 +26,7 @@ module.exports = {
     production: {
       sourceMaps: true,
       presets: ['minify'],
+      comments: false,
     },
   },
 };
